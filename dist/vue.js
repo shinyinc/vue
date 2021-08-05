@@ -1,6 +1,6 @@
 /*!
  * Vue.js v2.6.11
- * (c) 2014-2019 Evan You
+ * (c) 2014-2020 Evan You
  * Released under the MIT License.
  */
 (function (global, factory) {
@@ -5281,7 +5281,7 @@
     current
   ) {
     var cached$$1 = cache[key];
-    if (cached$$1 && (!current || cached$$1.tag !== current.tag)) {
+    if (cached$$1 && (!current || cached$$1.componentInstance !== current.componentInstance)) {
       cached$$1.componentInstance.$destroy();
     }
     cache[key] = null;
